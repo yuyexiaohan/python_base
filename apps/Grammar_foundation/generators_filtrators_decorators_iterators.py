@@ -7,7 +7,104 @@
 
 
 # 装饰器(decorators)
+# 1 不带参数的装饰器
+import time
+def timmer(func):
+ def wrapper():
+  """计时功能"""
+  time_start=time.time()
+  func()
+  time_end=time.time()
+  print("Run time is %f "%(time_end-time_start))
+ return wrapper
+@timmer  #等于 foo=timmer(foo)
+def foo():
+ """打印"""
+ time.sleep(2)
+ print("Hello boy!")
+foo()
 
+# 打印结果：
+# Hello boy!
+# Run time is 2.000000
+
+# 从结果看，先执行
+
+# 2 带参数的装饰器
+def auth(filetype):
+ def auth2(func):
+  def wrapper(*args,**kwargs):
+   if filetype == "file":
+    username=input("Please input your username:")
+    passwd=input("Please input your password：")
+    if passwd == '123456' and username == 'Frank':
+     print("Login successful")
+     func()
+    else:
+     print("login error!")
+   if filetype == 'SQL':
+    print("No SQL")
+  return wrapper
+ return auth2
+@auth(filetype='file') #先先返回一个auth2 ==》@auth2 ==》 index=auth2(index) ==》 index=wrapper
+def index():
+ print("Welcome to China")
+index()
+
+# 打印结果：
+# 输入错误情况：
+# Please input your username:123
+# Please input your password：123
+# login error!
+
+# 输入正确情况：
+# Please input your username:Frank
+# Please input your password：123456
+# Login successful
+# Welcome to China
+
+# 3 装饰器的叠加：
+
+import time
+#
+def timmer(func):
+ def wrapper():
+  """计时功能"""
+  time_start=time.time()
+  func()
+  time_end=time.time()
+  print("Run time is %f "%(time_end-time_start))
+  # print("---",wrapper)
+ return wrapper
+def auth(filetype):
+ def auth2(func):
+  def wrapper(*args,**kwargs):
+   if filetype == "file":
+    username=input("Please input your username:")
+    passwd=input("Please input your password：")
+    if passwd == '123456' and username == 'Frank':
+     print("Login successful")
+     func()
+    else:
+     print("login error!")
+   if filetype == 'SQL':
+    print("No SQL")
+  return wrapper
+ return auth2
+@timmer
+@auth(filetype='file') #先先返回一个auth2 ==》@auth2 ==》 index=auth2() ==》 index=wrapper
+def index():
+ print("Welcome to China")
+index()
+
+# 打印结果：
+#Please input your username:Frank
+# Please input your password：123456
+# Login successful
+# Welcome to China
+# Run time is 12.507478
+
+#
 
 # 生成器(generators)/迭代器(iterator)
 
