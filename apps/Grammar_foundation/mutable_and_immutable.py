@@ -1,7 +1,7 @@
 # coding=utf-8 
 # @Time : 2018/8/23 16:17 
 # @Author : achjiang
-# @File : change_or_unchange.py
+# @File : mutable_and_immutable.py
 
 #python里的数据类型:  数值类型（int,float,complex,bool）/序列类型 （str list tuple）
 
