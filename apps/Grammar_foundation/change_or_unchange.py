@@ -50,3 +50,40 @@ li = [True,False,None]
 
 # 不可变的数据类型：tuple,string,number
 # 可变的数据类型： list,dict
+
+str = 'string'
+tup = (1,2,3,4,5,6)
+lis = ['a','b','c','d','e']
+dic = {'a':1,'b':2,'c':3,'d':4,'e':5}
+int1 = 1
+float1 = 1.2
+complex1 = 1 + 3j
+bool1 = True
+
+lis2 = [str,tup,lis,dic,int1,float1,complex1,bool1]
+
+for i in lis2:
+	# print('%s的id:'%i,id(i))
+	print('{}的id:'.format(i),id(i))
+
+'''
+打印结果：
+string的id: 2444445146336
+(1, 2, 3, 4, 5, 6)的id: 2444445105512
+['a', 'b', 'c', 'd', 'e']的id: 2444447573256
+{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}的id: 2444444990704
+1的id: 1710535744
+1.2的id: 2444699325880
+(1+3j)的id: 2444699354288
+True的id: 1710055648
+'''
+# 改变值：
+lis[0] = 9
+dic['a'] = 9
+print(lis,id(lis),'\n',dic,id(dic))
+
+'''
+打印结果：id(地址没有变化)，即可变类型内容改变后其存储的地址没有变化，但是str/tuple/number数值类型不可改变
+[9, 'b', 'c', 'd', 'e'] 2265894872328 
+ {'a': 9, 'b': 2, 'c': 3, 'd': 4, 'e': 5} 2265892289776
+'''
