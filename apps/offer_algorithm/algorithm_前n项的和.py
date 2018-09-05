@@ -1,7 +1,7 @@
 # coding=utf-8
 # @Time : 2018/9/3 22:40 
 # @Author : achjiang
-# @File : 前n项的和.py
+# @File : algorithm_前n项的和.py
 
 '''
 求1+2+3+...+n，
