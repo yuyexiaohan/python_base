@@ -1,7 +1,7 @@
 # coding=utf-8 
 # @Time : 2018/9/3 23:22 
 # @Author : achjiang
-# @File : 二分法排序.py
+# @File : algorithm_二分法排序.py
 import os
 
 # 一行代码计算0~100的和
