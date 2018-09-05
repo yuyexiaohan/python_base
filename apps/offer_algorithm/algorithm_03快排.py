@@ -24,6 +24,7 @@ def quicksort(li):
 		return quicksort(li_min) + [base] + quicksort(li_max)
 
 list_01 = [3,6,8,4,9,12,2,44,67,22,13]
+# 打印结果：[2, 3, 4, 6, 8, 9, 12, 13, 22, 44, 67]
 a = quicksort(list_01)
 print(a)
 

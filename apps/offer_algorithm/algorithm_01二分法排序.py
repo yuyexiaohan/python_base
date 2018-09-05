@@ -1,7 +1,7 @@
 # coding=utf-8 
 # @Time : 2018/9/3 23:22 
 # @Author : achjiang
-# @File : algorithm_二分法排序.py
+# @File : algorithm_01二分法排序.py
 import os
 
 # 一行代码计算0~100的和
@@ -10,6 +10,7 @@ import os
 
 # 二分法查找
 def find_tow(li,x):
+	'''二分法排序'''
 	star_index,end_index = 0,len(li)-1
 	li_new = sorted(li)
 	i = 0
