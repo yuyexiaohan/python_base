@@ -7,11 +7,12 @@
 class Node(object):
 	"""节点"""
 	def __init__(self, item):
+		self.prev = None
 		self.elem = item
 		self.next = None
-		self.prev = None
 
-class Dpuble_link_list(object):
+
+class Double_link_list(object):
 	"""双向列表"""
 
 	def __init__(self, node=None):
@@ -37,9 +38,10 @@ class Dpuble_link_list(object):
 	def travel(self):
 		"""遍历整个链表"""
 		cur = self.__head
-		while cur != None:
+		while cur is not None:
 			print (cur.elem, end=" ")  # 打印cur.elem??
 			cur = cur.next
+		print("")
 
 	def add(self, item):
 		"""链表头部添加元素"""
@@ -68,22 +70,24 @@ class Dpuble_link_list(object):
 		"""
 		if pos <= 0:
 			self.add (item)
-		elif pos > (self.length () - 1):
+		elif pos >= self.length ():
 			"""不能包含等号"""
-			pre = self.__head
 			self.append (item)
 		else:
 			cur = self.__head
 			count = 0
-			while count <= pos:
-				count += 1
+			while count < pos:
 				cur = cur.next
+				count += 1
 			# 当循环退出之后
-			node = Node (item)
-			node.next = cur
+			node = Node (item) # 实例节点
+			"""中间插入部分有bug,在3 99处无限循环"""
+			node.next = cur #
 			node.prev = cur.prev
 			cur.prev.next = node
 			cur.prev = node
+			print('....',cur.next.elem)
+
 
 	def remove(self, item):
 		"""删除节点
@@ -121,7 +125,7 @@ class Dpuble_link_list(object):
 
 
 if __name__ == "__main__":
-	dll = Dpuble_link_list()
+	dll = Double_link_list()
 	dll.append(1)
 	print(dll.is_empty())
 	print(dll.length())
@@ -135,8 +139,9 @@ if __name__ == "__main__":
 	dll.append(5)
 	dll.append(6)
 
-	dll.travel()
-	dll.insert(3,99)
-	dll.remove(3)
+	# dll.travel()
+	# dll.add(888)
+	dll.insert(2,99)
+	# dll.remove(99)
 	dll.travel()
 	print(dll.length())
