@@ -35,3 +35,10 @@ if __name__ == "__main__":
 	print(q.dequeue())
 	print(q.dequeue())
 	print(q.dequeue())
+
+"""
+打印结果：
+3
+2
+1
+"""

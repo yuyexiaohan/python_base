@@ -50,5 +50,13 @@ if __name__ == "__main__":
 	print(deq.remove_rear())
 	print(deq.remove_rear())
 
-
+"""
+打印结果：
+3
+2
+1
+13
+12
+11
+"""
 

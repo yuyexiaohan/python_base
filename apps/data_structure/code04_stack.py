@@ -46,3 +46,15 @@ if __name__ == "__main__":
 	print (s.peek())
 	print (s.size())
 	print (s.is_empty())
+
+"""
+打印结果：
+False
+3
+2
+1
+99
+1
+False
+
+"""

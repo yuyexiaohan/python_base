@@ -178,3 +178,20 @@ if __name__ == "__main__":
 	print()
 	print(ll.search(99))
 	print("链表长度：",ll.length())
+
+"""
+打印结果：
+True
+0
+False
+1
+8 1 2 3 4 5
+链表长度： 6
+
+-1 8 1 2 3 4 5 99 100
+-1 8 1 2 3 4 5 99
+
+True
+链表长度： 8
+
+"""
