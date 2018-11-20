@@ -32,7 +32,8 @@ def quick_sort(alist, star, end):
 
 
 if __name__ == "__main__":
-	li = [99, 78 ,129, 88, 90, 23, 45, 89]
+	# li = [99, 78 ,129, 88, 90, 23, 45, 89]
+	li = [99,88,77,66,77,44,33,88,55,11,0]
 	quick_sort(li,0,len(li)-1)
 	print(li)
 
