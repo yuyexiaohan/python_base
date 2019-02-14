@@ -1,7 +1,7 @@
 # coding=utf-8 
 # @Time : 2018/9/6 22:17 
 # @Author : achjiang
-# @File : algorithm_04斐波那契数列.py
+# @File : 07-斐波那契数列.py
 
 # 斐波那契数列的写法：f(0) = 1,f(1) = 1,f(n) = f(n-1) + f(n-2)
 
