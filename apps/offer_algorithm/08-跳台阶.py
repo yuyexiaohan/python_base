@@ -23,6 +23,9 @@ class Solution:
 				res[(i + 1) % 2] = res[0] + res[1]
 			return res[(number + 1) % 2]
 
+
+
+
 ss = Solution()
 a = ss.JumpFloor(5)
 print(a)
