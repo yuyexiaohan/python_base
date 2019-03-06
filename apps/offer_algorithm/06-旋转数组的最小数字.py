@@ -31,3 +31,8 @@ class Solution:
 							rear = i
 			minVal = rotateArray[rear]
 			return minVal
+
+s_examp = Solution()
+rotateArray = [5,6,7,2,2,3]
+array_new = s_examp.minNumberInRotateArray(rotateArray)
+print(array_new)
