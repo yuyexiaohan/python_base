@@ -8,7 +8,7 @@
 
 class Solution:
     def power(self, base, exponent):
-        # write code here
+        # 方法1：直接判断法
         if base == 0:
             return 0
         if exponent == 0:
@@ -21,7 +21,7 @@ class Solution:
         return base
 
     def power1(self, base, exponent):
-        # 方法1：直接使用python的方法
+        # 方法2：直接使用python的方法
         return base**exponent
 
     def power_value(self, base, exponent):
@@ -36,6 +36,7 @@ class Solution:
         return ret
 
     def power2(self, base, exponent):
+        # 方法3：位移判断法
         try:
             ret = self.power_value(base, abs(exponent))
             if exponent < 0:
