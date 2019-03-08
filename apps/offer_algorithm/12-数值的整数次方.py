@@ -47,6 +47,7 @@ class Solution:
             return ret
 
     def print_fount(self, base):
+        # 打印函数
         print(base)
 
 
