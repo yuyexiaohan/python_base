@@ -23,6 +23,9 @@ class Solution:
 	def Power1(self, base, exponent):
 		return base**exponent
 
+	def Power2(self, base, exponent):
+
+
 	def printFount(self, base):
 		print(base)
 
