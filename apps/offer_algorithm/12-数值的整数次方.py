@@ -7,7 +7,7 @@
 
 
 class Solution:
-    def Power(self, base, exponent):
+    def power(self, base, exponent):
         # write code here
         if base == 0:
             return 0
@@ -20,7 +20,7 @@ class Solution:
             exponent -= 1
         return base
 
-    def Power1(self, base, exponent):
+    def power1(self, base, exponent):
         # 方法1：直接使用python的方法
         return base**exponent
 
@@ -35,7 +35,7 @@ class Solution:
             ret *= base
         return ret
 
-    def Power2(self, base, exponent):
+    def power2(self, base, exponent):
         try:
             ret = self.power_value(base, abs(exponent))
             if exponent < 0:
@@ -45,12 +45,14 @@ class Solution:
         else:
             return ret
 
-    def printFount(self, base):
+    def print_fount(self, base):
         print(base)
 
 
 example = Solution()
-base_int_mi = example.Power(0.1, 2)
-base_int_mi1 = example.Power1(0, 2)
-example.printFount(base_int_mi)
-example.printFount(base_int_mi1)
+base_int_mi = example.power(0.1, 2)
+base_int_mi1 = example.power1(0, 2)
+base_int_mi2 = example.power2(0, 2)
+example.print_fount(base_int_mi)
+example.print_fount(base_int_mi1)
+example.print_fount(base_int_mi2)
